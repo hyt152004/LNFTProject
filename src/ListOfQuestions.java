@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public class ListOfQuestions {
     public ArrayList<String> LOC;
@@ -24,10 +25,20 @@ public class ListOfQuestions {
 
     public void selectThreeRandom()
     {
-        for (String s : LOC)
-        {
-            System.out.println(s);
-        }
+        Random rand = new Random();
+        int upperLimit = LOC.size();
+        int first = rand.nextInt(upperLimit);
+        int second = rand.nextInt(upperLimit);
+        int third = rand.nextInt(upperLimit);
+
+        System.out.println(LOC.get(first));
+        System.out.println(LOC.get(second));
+        System.out.println(LOC.get(third));  
+    }
+
+    public static void main(String[] args) {
+        ListOfQuestions questions = new ListOfQuestions(); // Create an instance
+        questions.selectThreeRandom(); // Call the method on the instantance
     }
 
 }
