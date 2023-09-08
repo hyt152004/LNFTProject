@@ -1,3 +1,3 @@
-public class Day {
+public class Day extends ListOfQuestions {
     
 }
