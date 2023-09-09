@@ -45,9 +45,4 @@ public class ListOfQuestions {
 
     }
 
-    public static void main(String[] args) {
-        ListOfQuestions questions = new ListOfQuestions();
-        questions.selectThreeRandom();
-    }
-
 }

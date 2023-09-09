@@ -4,7 +4,7 @@ import exceptions.dayScoreOutOfBoundsException;
 
 public class DayScore {
 
-    static int dayScore;
+    static double dayScore;
 
     public DayScore(){
         DayScore.dayScore = -1;
@@ -20,7 +20,7 @@ public class DayScore {
         }
     }
 
-    public int getDayScore(){
+    public double getDayScore(){
         return dayScore;
     }
 
