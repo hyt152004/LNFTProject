@@ -1,4 +1,7 @@
 package model;
+
+import exceptions.dayScoreOutOfBoundsException;
+
 public class DayScore {
 
     static int dayScore;
@@ -7,11 +10,13 @@ public class DayScore {
         DayScore.dayScore = -1;
     }
 
-    public void setDayScore(int dayScore){
-        if(dayScore < 0 || dayScore > 11)
-        DayScore.dayScore = dayScore;
-        else{
-            // throws exception i think
+    public void setDayScore(int dayScore) throws dayScoreOutOfBoundsException{
+        if (dayScore >= 0 && dayScore <= 10) {
+            DayScore.dayScore = dayScore;
+        }
+            
+        else {
+            throw new dayScoreOutOfBoundsException();
         }
     }
 
