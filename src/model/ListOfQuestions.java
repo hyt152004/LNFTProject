@@ -7,6 +7,7 @@ import java.util.Set;
 public class ListOfQuestions {
     public ArrayList<String> LOC;
 
+    // EFFECTS: constructs a ListOfQuestions with an ArrayList of all the questions
     public ListOfQuestions()
     {
         LOC = new ArrayList<>();
@@ -28,7 +29,8 @@ public class ListOfQuestions {
         LOC.add("How were you when you woke up today?");
     }
 
-    public void selectThreeRandom()
+    // EFFECTS: returns three distinct questions in the form of an ArrayList
+    public String[] selectThreeRandom()
     {
         Random rand = new Random();
         int upperLimit = LOC.size();
@@ -39,10 +41,18 @@ public class ListOfQuestions {
             distinctNumbers.add(randomNumber);
         }
 
-        for (int num : distinctNumbers) {
-            System.out.println(LOC.get(num));
+        String[] result = new String[3];
+
+        // converts LOC to an Array to access each element by indexing
+        String[] locTemp = LOC.toArray(new String[LOC.size()]);
+
+        for (int i = 0; i < 3; i++) {
+            result[i] = locTemp[i];
         }
 
+        return result;
+
     }
+
 
 }

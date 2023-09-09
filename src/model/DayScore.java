@@ -1,16 +1,20 @@
 package model;
 
-import exceptions.dayScoreOutOfBoundsException;
+import exception.dayScoreOutOfBoundsException;
 
 public class DayScore {
 
-    static double dayScore;
+    private static double dayScore;
 
+    // EFFECTS: constructs a new DayScore 
     public DayScore(){
         DayScore.dayScore = -1;
     }
 
-    public void setDayScore(int dayScore) throws dayScoreOutOfBoundsException{
+    // MODIFIES: this
+    // EFFECTS: sets the dayScore to the given value.
+    //          if given value is not within in [0, 10], then throw new dayScoreOutOfBoundsException
+    public void setDayScore(double dayScore) throws dayScoreOutOfBoundsException{
         if (dayScore >= 0 && dayScore <= 10) {
             DayScore.dayScore = dayScore;
         }
