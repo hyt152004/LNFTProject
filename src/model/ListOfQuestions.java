@@ -1,6 +1,8 @@
 package model;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 
 public class ListOfQuestions {
     public ArrayList<String> LOC;
@@ -30,13 +32,17 @@ public class ListOfQuestions {
     {
         Random rand = new Random();
         int upperLimit = LOC.size();
-        int first = rand.nextInt(upperLimit);
-        int second = rand.nextInt(upperLimit);
-        int third = rand.nextInt(upperLimit);
+        Set<Integer> distinctNumbers = new HashSet<>();
 
-        System.out.println(LOC.get(first));
-        System.out.println(LOC.get(second));
-        System.out.println(LOC.get(third));  
+        while (distinctNumbers.size() < 3) {
+            int randomNumber = rand.nextInt(upperLimit);
+            distinctNumbers.add(randomNumber);
+        }
+
+        for (int num : distinctNumbers) {
+            System.out.println(LOC.get(num));
+        }
+
     }
 
     public static void main(String[] args) {
