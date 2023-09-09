@@ -21,6 +21,8 @@ public class ListOfQuestions {
         LOC.add("How did you make others feel today?");
         LOC.add("What is worrying me?");
         LOC.add("What didn't work so well today?");
+        LOC.add("What went wrong today?");
+        LOC.add("How were you when you woke up today?");
     }
 
     public void selectThreeRandom()
@@ -37,8 +39,8 @@ public class ListOfQuestions {
     }
 
     public static void main(String[] args) {
-        ListOfQuestions questions = new ListOfQuestions(); // Create an instance
-        questions.selectThreeRandom(); // Call the method on the instantance
+        ListOfQuestions questions = new ListOfQuestions();
+        questions.selectThreeRandom();
     }
 
 }
