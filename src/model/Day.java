@@ -1,4 +1,4 @@
 package model;
-public class Day extends ListOfQuestions {
+public class Day {
     
 }

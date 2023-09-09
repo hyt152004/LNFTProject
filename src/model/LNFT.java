@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class LNFT {
     
     private Scanner input;
-    private Day day;
+    private User user;
     private LocalDate todayDate;
     
     //LETS GET THIS STARTED!!!
@@ -17,7 +17,7 @@ public class LNFT {
     //EFFECTS: initalize variables
     public void init(){
         input = new Scanner(System.in);
-        day = new Day();
+        user = new User();
         todayDate = LocalDate.now();
     }
 
@@ -63,7 +63,7 @@ public class LNFT {
         if (command.equals("a")) {
             updateDayScore();
         } else if (command.equals("b")) {
-            UpdateEmotionScale();
+            updateEmotionScale();
         } else if (command.equals("c")) {
             answerDailyQuestions();
         } else if (command.equals("d")) {
@@ -80,7 +80,23 @@ public class LNFT {
     public void updateDayScore(){
         System.out.println("How would you rate your day out of 10 today? (0 -> Terrible, 10 -> BEST DAY)");
         double dayScore = input.nextFloat();
-        setDayScore(dayScore);
+
+    }
+
+    //EFFECTS: updates Emotion scale
+    public void updateEmotionScale(){
+        System.out.println("What is your emotion today?");//idk how this is working yet
+        int emotion = input.nextInt();
+    }
+
+    //EFFECTS: answers daily questions
+    public void answerDailyQuestions(){
+
+    }
+
+    //EFFECTS: add free hournal
+    public void addJournalEntry(){
+        
     }
 
 
