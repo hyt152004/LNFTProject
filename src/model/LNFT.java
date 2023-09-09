@@ -14,7 +14,7 @@ public class LNFT {
         runLNFT();
     }
 
-    //EFFECTS: initalize variables
+    //EFFECTS: initialize variables
     public void init(){
         input = new Scanner(System.in);
         user = new User();
@@ -94,7 +94,7 @@ public class LNFT {
 
     }
 
-    //EFFECTS: add free hournal
+    //EFFECTS: add free journal
     public void addJournalEntry(){
         
     }
