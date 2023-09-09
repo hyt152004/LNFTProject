@@ -7,7 +7,7 @@ public class EmotionScale {
     }
 
     public void setEmotionScale(int emotionScale) {
-        emotionScale = emotionScale;
+        EmotionScale.emotionScale = emotionScale;
     }
 
     public int getEmotionScale() {
