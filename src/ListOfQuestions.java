@@ -34,7 +34,7 @@ public class ListOfQuestions {
         Set<Integer> distinctNumbers = new HashSet<>();
 
         while (distinctNumbers.size() < 3) {
-            int randomNumber = rand.nextInt(upperLimit); // Generate a random number between 0 (inclusive) and n (exclusive)
+            int randomNumber = rand.nextInt(upperLimit);
             distinctNumbers.add(randomNumber);
         }
 
