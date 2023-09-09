@@ -1,3 +1,4 @@
+package model;
 public class DayScore {
 
     static int dayScore;
